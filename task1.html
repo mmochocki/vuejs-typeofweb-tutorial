@@ -1,22 +1,43 @@
+<style>
+#app img{
+  max-width:100%;
+}
+
+.input-box{
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+.input-box input{
+  border: 2px solid gray;
+  height: 30px;
+  width: 30%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Task 1</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
 
     <div id="app">
-        <a v-bind:href="href">
+        <a v-bind:href="href" target="_blank">
         <img v-bind:src="src" v-bind:alt="alt">{{ text }} 
         </a>
         <br>
-        <input v-model="src" />
-        <input v-model="alt" />
-        <input v-model="href" />
+        <div class="input-box">
+            <input v-model="src" />
+            <input v-model="alt" />
+            <input v-model="href" />
+      </div>
       </div>
 
 </body>
@@ -26,9 +47,9 @@
 new Vue({
   data() {
     return {
-     src: "https://typeofweb.com/wp-content/uploads/2017/08/cropped-typeofweb_logo-04-white-smaller-1-e1504359870362.png",
-    alt: "default alt",
-    href:"#"
+     src: "http://sizeer.com/wp-content/uploads/2018/03/BANER_BLACK_FRIDAY_home_1920x740_PL.gif",
+    alt: "Gif me some BLACK",
+    href:"https://sklep.sizeer.com/gif-me-more-black"
     };
   }
 }).$mount("#app");
